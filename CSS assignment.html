@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            header, footer {
+                background-color: lightcoral;
+                min-height: 15vh;
+                color:white;
+            }
+            footer {
+                min-height: 10vh;
+            }
+            #main {
+                display: flex;
+                min-height: calc(100vh - 30vh);
+            }
+            header, footer, nav, aside, article {
+                padding: 1em;
+            }
+            #main nav, #main aside {
+                flex: 0 0 15vw; 
+                background-color: darkslategrey;
+                color: white;
+            }
+            #main > nav {
+                order: -1; /*leftmost column*/
+            }
+            #main article {
+                flex: 1;
+            }
+            body {
+                margin: 0;
+            }
+            .float-left{
+                float: left;
+                padding: 5px;
+                margin: 0.5px;
+                height: 90px;
+                width: 140px;
+            }
+            a {
+                text-decoration: none;
+            }
+            ul {
+                list-style-type: none;
+                margin: 0;
+                margin-top: 10px;
+                padding: 0;
+                position: fixed;
+                overflow: auto;
+            }
+            li a {
+                display: block;
+                padding: 8px 16px;
+                font-size: large;
+                color: white;
+            }
+            li a.active {
+                background-color: lightseagreen;
+                color: white;
+            }
+            li a:hover:not(.active) {
+                background-color: lightsteelblue;
+                color: white;
+            }   
+            #grid {
+                display: grid;
+                grid-template-rows: 1fr 1fr;
+                grid-template-columns: 1fr 1fr;
+                /* grid-template-columns: repeat(auto-fill, minmax(350px,1fr));  */
+                grid-gap: 10px;
+            }
+            #grid div {
+                background-color: mistyrose;
+                padding: 5px;
+                font-size: medium;
+                text-align: center;
+                color: rgba(0, 0, 0, 0.534);
+                overflow-wrap: normal;
+            }
+            article a {
+                color: rgba(0, 0, 0, 0.877);
+            }
+            #grid div:hover,a:hover {
+                background-color:rgb(58, 65, 65);
+                color: red;
+            }
+            #grid a:hover {
+                background-color:rgb(58, 65, 65);
+                color: white;
+            } 
+            input[type=search] {
+                padding: 5px;
+                font-size: 15px;
+                border: 1px solid grey;
+                float: left;
+                width: 80%;
+                background: #f1f1f1;
+            }
+            button {
+                float: left;
+                width: 20%;
+                padding: 5px;
+                background: #2196F3;
+                color: white;
+                font-size: 15px;
+                border: 1px solid grey;
+                border-left: none;
+                cursor: pointer;
+            }
+            button:hover {
+                background: #0b7dda;
+            }
+            .links {
+                margin-top: 80px;
+                height: 30vh;
+                overflow: auto;
+            }
+            .links a {
+                color: white;
+                font-size: large;
+            }
+            #newsletter {
+                margin-top: 200px;
+            }
+            #newsletter a {
+                color: rgb(250, 221, 196);
+                font-size: 12.5pt;
+                text-decoration: underline;
+            }
+        </style>
+        <body>
+            <header>  
+                <img src="logo.jpg" class="float-left" alt="Holistic logo"/>
+                <h1 style="text-align: center;">HOLISTIC HEALTH BLOG</h1>
+            </header>
+            <div id = "main">
+                <article> 
+                    <div id="grid">
+                        <div>
+                            <a href="#alt-meat"><h3>ALT-MEAT MOVES BEYOND BEEF</h3></a>
+                            First came the burgers, now just-like-the-real-thing chicken and fish products are jumping on the alt-meat bandwagon.
+                        </div>
+                        <div>
+                            <a href="#healthdata"><h3>NEW TECH IS PUTTING OUR HEALTH DATA AT OUR FINGERTIPS—AND OUR HEALTH CARE IN OUR HANDS</h3></a>
+                            Your wearables have leveled up.
+                        </div>
+                        <div>
+                            <a href="#megaformer"><h3>MEGAFORMER-INSPIRED WORKOUTS WILL BECOME MEGA-POPULAR</h3></a>
+                            This is not your mother’s Pilates.
+                        </div>
+                        <div>
+                            <a href="#chickpeas"><h3>CHICKPEAS ARE GETTING THE CAULIFLOWER TREATMENT (AKA THEY’RE EVERYWHERE)</h3></a>
+                            New chickpea products—from chickpea pastas to cookie dough—are filling grocery store shelves. (And consumers are eating it up.)
+                        </p>
+                    </div>
+                </article>
+                <nav>
+                    <ul>
+                        <li><a class="active" href="#home">Home</a></li>
+                        <li><a href="#fitness">Fitness</a></li>
+                        <li><a href="#mind">Mind Care</a></li>
+                        <li><a href="#food">Food</a></li>
+                        <li><a href="#beauty">Beauty</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>                       
+                </nav>
+                <aside> 
+                    <div>
+                        <input type="search" placeholder="Search blog..." name="search">
+                        <button type="submit">Go</button>
+                    </div>
+                    <div class="links">
+                        <p><a href="Trends2020">Expected health trends in 2020</a></p>
+                        <p><a href="Trends2019">Food trends to be left in 2019</a></p>
+                        <p><a href="Yogain30">30 minute Yoga and Meditition</a></p>
+                        <p><a href="KetoRecipe">Keto Recipes for New Year's Eve</a></p>
+                    </div>
+                    <div id="newsletter">
+                        <p><a href="#newsletter"> Receive Newsletters </a></p>
+                    </div>
+                </aside>
+            </div>
+            <footer> 
+                <h3 style="text-align: center;"> © Copyright. All rights reserved.</h3>                             
+            </footer>
+        </body>
+    </head>
+</html>
